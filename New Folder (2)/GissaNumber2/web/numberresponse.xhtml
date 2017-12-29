@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>GUESS THE NUMBER</title>
+        <h:outputStylesheet library="css" name="css.css"/>
+    </h:head>
+
+    <h:body>
+        <h:form>
+            <h:graphicImage value="#{resource['img:img.gif']}" />
+
+            <h3>
+                <h:outputText value="#{userNumberBean.response}" />
+            </h3>
+
+            <p:commandButton  value="Back" action="index" />
+            
+            <p:commandButton id="RestartButton" value="NewGame"
+                             action="#{userNumberBean.reset()}"
+                             immediate="true" />
+
+
+        </h:form>
+
+    </h:body>
+</html>
